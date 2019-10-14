@@ -1,0 +1,6 @@
+
+type: files
+headline: Product image
+max: 1
+layout: cards
+info: "{{ file.dimensions }}"

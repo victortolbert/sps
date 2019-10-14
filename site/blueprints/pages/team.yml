@@ -1,0 +1,10 @@
+title: Team
+extends: layouts/default
+
+
+icon: 😺
+
+options:
+  url: false
+  status: false
+  delete: false

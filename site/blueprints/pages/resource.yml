@@ -1,0 +1,27 @@
+title: Resource
+
+columns:
+  left:
+    width: 1/2
+    sections:
+      gallery:
+        type: files
+        layout: cards
+        image:
+          cover: true
+          ratio: 1/1
+  right:
+    width: 1/2
+    sections:
+      content:
+        type: fields
+        fields:
+          heading:
+            type: text
+          featured:
+            type: toggle
+            help: Will be featured on the home page
+          text:
+            type: textarea
+
+

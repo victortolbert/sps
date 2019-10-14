@@ -1,0 +1,25 @@
+title: Playground
+
+sections:
+  content:
+    type: fields
+    fields:
+      postType:
+        type: select
+        options:
+          - Gallery
+          - Image
+  gallery:
+    type: files
+    template: gallery-image
+    layout: cards
+    size: tiny
+    when:
+      postType: Gallery
+  image:
+    type: files
+    template: single-image
+    max: 1
+    layout: cards
+    when:
+      postType: Image

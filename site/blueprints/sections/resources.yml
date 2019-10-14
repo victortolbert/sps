@@ -1,0 +1,9 @@
+headline: Resources
+type: pages
+layout: cards
+text: "{{ page.heading.or(page.title) }}"
+info: "{{ page.images.count }} images"
+template: resource
+image: 
+  cover: true
+  ratio: 1/1

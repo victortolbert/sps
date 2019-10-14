@@ -1,0 +1,14 @@
+title: Resources
+
+sections:
+  drafts:
+    extends: sections/resources
+    headline: Drafts
+    status: drafts
+    layout: list
+
+  published:
+    extends: sections/resources
+    headline: Published Resources
+    status: published
+
