@@ -2,7 +2,7 @@ Title: Search
 
 ----
 
-Description: Search getkirby.com and our docs to find enlightenment.
+Description: Search the docs to find enlightenment.
 
 ----
 
