@@ -21,7 +21,6 @@ use Kirby\Toolkit\Str;
  */
 trait UserActions
 {
-
     /**
      * Changes the user email address
      *
@@ -95,7 +94,7 @@ trait UserActions
     {
         return $this->commit('changePassword', [$this, $password], function ($user, $password) {
             $user = $user->clone([
-                'password' => $password = $user->hashPassword($password)
+                'password' => $password = User::hashPassword($password)
             ]);
 
             $user->writePassword($password);
@@ -158,7 +157,7 @@ trait UserActions
     /**
      * Creates a new User from the given props and returns a new User object
      *
-     * @param array $input
+     * @param array $props
      * @return self
      */
     public static function create(array $props = null)
@@ -166,7 +165,7 @@ trait UserActions
         $data = $props;
 
         if (isset($props['password']) === true) {
-            $data['password'] = static::hashPassword($props['password']);
+            $data['password'] = User::hashPassword($props['password']);
         }
 
         $props['role'] = $props['model'] = strtolower($props['role'] ?? 'default');
@@ -198,6 +197,9 @@ trait UserActions
             } else {
                 $languageCode = null;
             }
+
+            // add the user to users collection
+            $user->kirby()->users()->add($user);
 
             // write the user data
             return $user->save($user->content()->toArray(), $languageCode);
@@ -242,6 +244,9 @@ trait UserActions
                 throw new LogicException('The user directory for "' . $user->email() . '" could not be deleted');
             }
 
+            // remove the user from users collection
+            $user->kirby()->users()->remove($user);
+
             return true;
         });
     }
@@ -273,6 +278,26 @@ trait UserActions
     }
 
     /**
+     * Updates the user data
+     *
+     * @param array $input
+     * @param string $language
+     * @param bool $validate
+     * @return self
+     */
+    public function update(array $input = null, string $language = null, bool $validate = false)
+    {
+        $user = parent::update($input, $language, $validate);
+
+        // set auth user data only if the current user is this user
+        if ($user->isLoggedIn() === true) {
+            $this->kirby()->auth()->setUser($user);
+        }
+
+        return $user;
+    }
+
+    /**
      * This always merges the existing credentials
      * with the given input.
      *
@@ -287,7 +312,8 @@ trait UserActions
     /**
      * Writes the account information to disk
      *
-     * @return boolean
+     * @param array $credentials
+     * @return bool
      */
     protected function writeCredentials(array $credentials): bool
     {

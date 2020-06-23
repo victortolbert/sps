@@ -20,7 +20,6 @@ use Kirby\Toolkit\Str;
  */
 class LanguageRouter
 {
-
     /**
      * The parent language
      *
@@ -39,7 +38,7 @@ class LanguageRouter
      * Creates a new language router instance
      * for the given language
      *
-     * @param Kirby\Cms\Language $language
+     * @param \Kirby\Cms\Language $language
      */
     public function __construct(Language $language)
     {
@@ -118,7 +117,10 @@ class LanguageRouter
         $router   = new Router($this->routes());
 
         try {
-            return $router->call($path, $kirby->request()->method(), function ($route) use ($language) {
+            return $router->call($path, $kirby->request()->method(), function ($route) use ($kirby, $language) {
+                $kirby->setCurrentTranslation($language);
+                $kirby->setCurrentLanguage($language);
+
                 if ($page = $route->page()) {
                     return $route->action()->call($route, $language, $page, ...$route->arguments());
                 } else {

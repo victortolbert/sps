@@ -1,5 +1,6 @@
 <?php
 
+use Kirby\Toolkit\I18n;
 
 return [
     'props' => [
@@ -22,6 +23,13 @@ return [
          */
         'info' => function (string $info = null) {
             return $info;
+        },
+
+        /**
+         * Whether each item should be clickable
+         */
+        'link' => function (bool $link = true) {
+            return $link;
         },
 
         /**
@@ -50,6 +58,13 @@ return [
          */
         'query' => function (string $query = null) {
             return $query;
+        },
+
+        /**
+         * Enable/disable the search field in the picker
+         */
+        'search' => function (bool $search = true) {
+            return $search;
         },
 
         /**
