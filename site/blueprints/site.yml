@@ -39,8 +39,6 @@ tabs:
             type: pages
             status: listed
           notes: sections/notes
-          projects: sections/projects
-          albums: sections/albums
           info:
             type: fields
             fields:
@@ -48,16 +46,6 @@ tabs:
                 label: Website
                 type: url
                 width: 1/2
-              twitter:
-                label: Twitter
-                type: text
-                icon: twitter
-                width: 1/2
-              instagram:
-                label: Instagram
-                type: text
-                icon: instagram
-                placeholder: username
               bio:
                 label: Bio
                 type: textarea

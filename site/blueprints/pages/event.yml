@@ -1,54 +1,28 @@
-title: Event Info
-icon: 📆
+title: Event
+preset: page
+pages: false
+icon: 📅
+num: "{{ page.from.toDate('Ymd') }}"
 
-status:
-  draft: true
-  listed: true
-
-options:
-  url: false
-  delete: false
-
-columns:
-  - width: 1/2
-    fields:
-      subtitle:
-        label: Subtitle
-        type: text
-      text:
-        label: Text
-        type: textarea
-        size: huge
-
-  - width: 1/2
-    fields:
-      address:
-        label: Address
-        type: textarea
-      email:
-        label: Email
-        type: email
-      phone:
-        label: Phone
-        type: tel
-      photos:
-        type: structure
-        translate: false
-        fields:
-          itemimage:
-            label: Image
-            type: files
-            max: 1
-            parent: site.find('photography').children.first
-      social:
-        label: On the web
-        type: structure
-        fields:
-          platform:
-            label: Platform
-            type: text
-            width: 1/2
-          url:
-            label: URL
-            type: url
-            width: 1/2
+fields:
+  from:
+    label: Start
+    type: date
+    width: 1/2
+    default: today
+  to:
+    label: End
+    type: date
+    width: 1/2
+    default: today + 1day
+  location:
+    label: Location
+    type: text
+    width: 1/2
+  link:
+    label: Link
+    type: url
+    width: 1/2
+  text:
+    label: Description
+    type: textarea

@@ -1,0 +1,21 @@
+Title: Training
+
+----
+
+Events:
+
+- 
+  name: Test
+  description: Test
+  start_datetime: 2020-07-01
+  end_datetime: 2020-07-07 06:05
+  modality: ""
+  ceus: ""
+  archive: ""
+
+----
+
+Text:
+
+Training page
+---

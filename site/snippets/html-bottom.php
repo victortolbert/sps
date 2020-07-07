@@ -1,5 +1,3 @@
-<?php snippet('site-footer') ?>
-
 <?php if(kirby()->user()): ?>
   <a href="<?php echo $page->panelUrl(); ?>">Edit Page</a>
 <?php endif; ?>
