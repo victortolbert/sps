@@ -1,0 +1,1 @@
+<a href="/" class="navbar-item"><div><span style="font-family: &quot;Audiowide&quot;, cursive; font-size: 2.5rem;">Ga<span style="color: rgb(152, 14, 14);">SPS</span></span></div></a>
