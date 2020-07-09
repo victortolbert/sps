@@ -1,0 +1,132 @@
+Title: Standing ECCO Training
+
+----
+
+Start-date: 2020-08-05
+
+----
+
+Start-time: 10:30 am
+
+----
+
+End-date: 2020-08-05
+
+----
+
+End-time: 11:30 am
+
+----
+
+Modality: webinar
+
+----
+
+Meeting-provider: gotomeeting
+
+----
+
+Gotomeeting-url: 
+
+----
+
+Gotomeeting-access-code: 
+
+----
+
+Zoommeeting-url: 
+
+----
+
+Zoom-meeting-id: 
+
+----
+
+Meeting-phone: 1 (571) 317-3122
+
+----
+
+Text: 
+
+----
+
+Categories: 
+
+----
+
+Facilitators:
+
+- qCwgfwcJ
+- NwtcFwTn
+
+----
+
+Is-archived: false
+
+----
+
+Archive-link: 
+
+----
+
+Has-ceus: false
+
+----
+
+Ceus: 3
+
+----
+
+Tags: 
+
+----
+
+Authors: victor.tolbert@gmail.com, ted@example.com
+
+----
+
+From-date: 2020-08-05
+
+----
+
+From-time: 10:00 am
+
+----
+
+To-date: 2020-08-05
+
+----
+
+To-time: 11:30 am
+
+----
+
+Meeting-url: https://global.gotomeeting.com/join/
+
+----
+
+Meeting-access-code: 834-324-733
+
+----
+
+Description: 
+
+----
+
+Link: https://global.gotomeeting.com/join/834324733
+
+----
+
+Location: Webinar
+
+----
+
+From: 2020-08-01
+
+----
+
+To: 2020-08-01
+
+----
+
+Url: 

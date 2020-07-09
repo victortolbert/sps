@@ -1,4 +1,4 @@
-<ul class="resources">
+<ul class="flex list-none">
   <?php foreach ($resources as $resource): ?>
   <li>
     <a href="<?= $resource->url() ?>">

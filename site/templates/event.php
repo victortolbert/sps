@@ -1,13 +1,16 @@
 <?php snippet('html-top') ?>
 
-<a href="/events">Back</a>
+<article class="container p-6 mx-auto rich-text">
+  <a href="/events">
+    &larr; Back
+  </a>
 
-<h1 class="text-red-700">
-  <?= $page->title() ?>
-</h1>
+  <header class="mt-6">
+    <h1><?= $page->title() ?></h1>
+  </header>
 
-  <?= $page->title() ?>
+  <?= $page->text()->kirbytext() ?>
+</article>
 
-<?= $page->text()->kirbytext() ?>
 
 <?php snippet('html-bottom') ?>

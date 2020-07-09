@@ -1,6 +1,4 @@
-<?php snippet('html-top-home') ?>
-<?php snippet('nav') ?>
-
+<?php snippet('html-top') ?>
 
 <?php snippet('resources', [
   'resources' => page('resources')
@@ -11,4 +9,4 @@
     ->limit(3)
 ]) ?>
 
-<?php snippet('html-bottom-home') ?>
+<?php snippet('html-bottom') ?>

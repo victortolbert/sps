@@ -16,7 +16,7 @@
             <input type="search" autofocus class="search-input" name="q" id="q" placeholder="Search …" value="<?= $query ?>">
 
             <button class="search-submit | button-reset" value="Search">
-              <?php icon('search') ?>
+              <?php // icon('search') ?>
             </button>
 
           </div>

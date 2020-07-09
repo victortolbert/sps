@@ -1,13 +1,11 @@
 <?php snippet('html-top') ?>
+<article class="container p-6 mx-auto rich-text">
+  <header>
+    <h1 class="text-2xl font-bold text-grey-700">
+      <?= $page->title() ?>
+    </h1>
+  </header>
 
-<h1 class="text-red-700">
-  <?= $page->title() ?>
-</h1>
-
-<h1 class="mb-6 text-2xl font-bold text-red-700">
-  <?= $page->title() ?>
-</h1>
-
-<?= $page->text() ?>
-
+  <?= $page->text()->kirbytext() ?>
+</article>
 <?php snippet('html-bottom') ?>

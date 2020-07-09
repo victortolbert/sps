@@ -1,3 +1,5 @@
-<header id="site-header" class="flex items-baseline justify-between mb-6">
+<header id="site-header" class="flex items-baseline justify-between">
+  <div class="container mx-auto">
     <?php snippet('nav') ?>
+  </div>
 </header>

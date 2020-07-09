@@ -12,12 +12,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link rel="shortcut icon" href="/favicon.ico">
   <?= css(['assets/css/site.css', '@auto']) ?>
-  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons|Audiowide">
-  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
   <?= css($page->files()->filterBy('extension', 'css')->pluck('url')) ?>
   <script type="text/javascript">
     window.__INITIAL_STATE__ = '{ cars: [{ id: 1, name: "Buick" }] }'
   </script>
 </head>
-<body>
-  <?php snippet('site-header') ?>
+<body class="text-gray-600">
+  <div class="flex flex-col min-h-screen">
+    <?php snippet('site-header') ?>
+    <div class="w-full bg-gray-500 hero h-1/5">
+      hi
+    </div>
+    <main class="flex-1">

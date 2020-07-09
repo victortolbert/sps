@@ -1,0 +1,39 @@
+:root {
+  /** Colors **/
+  --color-backdrop: #ccc;
+  --color-background: #ccc;
+  --color-border: #ccc;
+  --color-focus: #4271ae;
+  --color-focus-light: #ccc;
+  --color-focus-outline: #ccc;
+  --color-negative: #c82829;
+  --color-negative-light: #ccc;
+  --color-negative-outline: #ccc;
+  --color-notice: #f5871f;
+  --color-notice-light: #ccc;
+  --color-positive: #5d800d;
+  --color-positive-light: #ccc;
+  --color-positive-outline: #ccc;
+  --color-text: #ccc;
+  --color-text-light: #ccc;
+
+  /** Font families **/
+  --font-family-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo,
+    Courier, monospace;
+  --font-family-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+
+  /** Font sizes **/
+  --font-size-tiny: #ccc;
+  --font-size-small: #ccc;
+  --font-size-medium: #ccc;
+  --font-size-large: #ccc;
+  --font-size-huge: #ccc;
+  --font-size-monster: #ccc;
+
+  /** Shadows **/
+  --box-shadow-dropdown: #ccc;
+  --box-shadow-item: #ccc;
+  --box-shadow-focus: #ccc;
+}

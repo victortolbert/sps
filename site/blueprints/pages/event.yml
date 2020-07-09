@@ -5,24 +5,129 @@ icon: 📅
 num: "{{ page.from.toDate('Ymd') }}"
 
 fields:
-  from:
-    label: Start
+  start_date:
+    label: Start Date
     type: date
-    width: 1/2
+    width: 1/4
     default: today
-  to:
-    label: End
+  start_time:
+    label: Start Time
+    type: time
+    width: 1/4
+    notation: 12
+    default: 10:00 am
+  end_date:
+    label: End Date
     type: date
-    width: 1/2
-    default: today + 1day
-  location:
-    label: Location
-    type: text
-    width: 1/2
-  link:
-    label: Link
+    width: 1/4
+    default: today
+  end_time:
+    label: End Time
+    type: time
+    width: 1/4
+    notation: 12
+    default: 11:30 am
+  modality:
+    label: Modality
+    type: select
+    options:
+      webinar: Webinar
+      onsite: On-Site
+    width: 1/4
+
+  meeting_provider:
+    label: Meeting Provider
+    type: select
+    options:
+      gotomeeting: GoToMeeting
+      zoom: Zoom
+    width: 1/4
+    when:
+      modality: webinar
+  gotomeeting_url:
+    label: GoToMeeting URL
     type: url
-    width: 1/2
+    placeholder: "https://global.gotomeeting.com/join/######"
+    width: 2/4
+    when:
+      modality: webinar
+      meeting_provider: gotomeeting
+  gotomeeting_access_code:
+    label: GoToMeeting Access Code
+    type: text
+    placeholder: "###-###-###"
+    width: 1/4
+    when:
+      modality: webinar
+      meeting_provider: gotomeeting
+  zoommeeting_url:
+    label: Zoom Invite Link
+    type: url
+    placeholder: "https://XXXXX.zoom.us/j/XXXXXXX"
+    width: 2/4
+    when:
+      modality: webinar
+      meeting_provider: zoom
+  zoom_meeting_id:
+    label: Zoom Meeting ID
+    type: text
+    placeholder: "###-###-###"
+    width: 1/4
+    when:
+      modality: webinar
+      meeting_provider: zoom
+  meeting_phone:
+    label: Meeting Phone Number
+    type: tel
+    width: 1/4
+    when:
+      modality: Webinar
   text:
-    label: Description
+    label: Event Details
     type: textarea
+  categories:
+    label: Categories
+    type: multiselect
+    width: 1/1
+    min: 0
+    max: 4
+    options: query
+    query: site.children.published
+  facilitators:
+    label: Facilitators
+    type: users
+  is_archived:
+    label: Is Archived?
+    type: toggle
+    text: Is it archived?
+    width: 1/3
+  archive_link:
+    label: Archive Link
+    type: url
+    width: 2/3
+    when:
+      is_archived: true
+  has_ceus:
+    label: CEUs
+    type: toggle
+    width: 1/3
+    text: CEUs available?
+  ceus:
+    label: CEU Credits
+    type: number
+    step: 0.5
+    min: 0.5
+    max: 3
+    width: 1/4
+    when:
+      has_ceus: true
+  tags:
+    label: Tags
+    type: tags
+  authors:
+    label: Authors
+    type: multiselect
+    min: 0
+    max: 4
+    options: query
+    query: users.filterBy("role", "admin").sortBy("name", "desc")

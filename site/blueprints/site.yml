@@ -23,10 +23,10 @@ tabs:
             type: text
             icon: instagram
             placeholder: username
-          soundcloud:
-            label: Souncloud
+          linkedin:
+            label: LinkedIn
             type: text
-            icon: soundcloud
+            icon: linkedin
             placeholder: username
           vimeo:
             label: Vimeo
