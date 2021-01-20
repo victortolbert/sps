@@ -12,7 +12,7 @@
     "axios": "^0.19.2",
     "connect-logger": "0.0.1",
     "dotenv": "^8.2.0",
-    "gsap": "^3.3.4",
+    "gsap": "^3.6.0",
     "json-server": "^0.16.1",
     "normalize.css": "^8.0.1",
     "nuxt": "^2.13.0",
